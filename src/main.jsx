@@ -12,6 +12,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import Dashboard from "./components/Dashboard/Dashboard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
         path: "Gadgets/:product_id",
         element: <GadgetDetails></GadgetDetails>,
         loader: () => fetch("/data.json"),
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard></Dashboard>,
+        loader: () => fetch("/booksData.json"),
       },
     ],
   },
