@@ -1,6 +1,6 @@
 [
     {
-      "product_id": "MOB001",
+      "product_id": "1",
       "product_title": "iPhone 15 Pro",
       "product_image": "https://www.sotophone.com/wp-content/uploads/2023/09/apple-iphone-15-pro-max-1.jpg",
       "category": "Mobile",
@@ -16,7 +16,7 @@
       "rating": 4.8
     },
     {
-      "product_id": "MOB002",
+      "product_id": "2",
       "product_title": "Samsung Galaxy S23 Ultra",
       "product_image": "https://images-cdn.ubuy.co.id/660c02105bc7a6552c68748d-samsung-galaxy-s23-ultra-5g-sm-s918b-ds.jpg",
       "category": "Mobile",
@@ -32,7 +32,7 @@
       "rating": 4.7
     },
     {
-      "product_id": "MOB003",
+      "product_id": "3",
       "product_title": "Google Pixel 8 Pro",
       "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Pixel-8-Pro-Obsidian-7046.jpg",
       "category": "Mobile",
@@ -48,7 +48,7 @@
       "rating": 4.6
     },
     {
-      "product_id": "MOB004",
+      "product_id": "4",
       "product_title": "OnePlus 11 5G",
       "product_image": "https://image01.oneplus.net/ebp/202301/11/1-M00-42-E5-CkvTlmO-dPWANpKzAAJoBrhAYus595.png",
       "category": "Mobile",
@@ -64,7 +64,7 @@
       "rating": 4.5
     },
     {
-      "product_id": "MOB005",
+      "product_id": "5",
       "product_title": "Xiaomi 13 Pro",
       "product_image": "https://cdn.prod.website-files.com/64ff10d1e6f88be0d9bd0890/66268a7e3312a8963152b671_xiaomi_13_pro.webp",
       "category": "Mobile",
@@ -80,7 +80,7 @@
       "rating": 4.4
     },
     {
-      "product_id": "MOB006",
+      "product_id": "6",
       "product_title": "Sony Xperia 1 V",
       "product_image": "https://swpno.com/wp-content/uploads/2024/01/sony-xperia-1-v-price-in-bangladesh-2.webp",
       "category": "Mobile",
@@ -96,7 +96,7 @@
       "rating": 4.3
     },
     {
-      "product_id": "CAM001",
+      "product_id": "7",
       "product_title": "Canon EOS R5",
       "product_image": "https://i1.adis.ws/i/canon/eos-r5_martin_bissig_lifestyle_05_c629aad3c2154f34b3d7d7ba5a509196?$70-30-header-4by3-dt-jpg$",
       "category": "Camera",
@@ -112,7 +112,7 @@
       "rating": 4.9
     },
     {
-      "product_id": "CAM002",
+      "product_id": "8",
       "product_title": "Sony A7 IV",
       "product_image": "https://5.imimg.com/data5/SELLER/Default/2023/6/314492522/UJ/WT/EB/33595861/viewsonic-full-hd-webcam-vb-cam-002-for-meeting-250x250.jpg",
       "category": "Camera",
@@ -128,7 +128,7 @@
       "rating": 4.8
     },
     {
-      "product_id": "TAB001",
+      "product_id": "9",
       "product_title": "iPad Pro M2",
       "product_image": "https://assets.gadgetandgear.com/upload/product/20221119_1668832521_693380.jpeg",
       "category": "Tablet",
@@ -144,7 +144,7 @@
       "rating": 4.9
     },
     {
-      "product_id": "TAB002",
+      "product_id": "10",
       "product_title": "Samsung Galaxy Tab S9 Ultra",
       "product_image": "https://www.climaxcomputer.com/wp-content/uploads/2023/12/img-5825-2-400x225.jpg",
       "category": "Tablet",
@@ -161,7 +161,7 @@
     },
 
     {
-          "product_id": "MOB009",
+          "product_id": "11",
           "product_title": "iPhone 16 Pro",
           "product_image": "https://www.istudio.store/cdn/shop/files/iPhone_16_Pro_White_Titanium_TH_1_1ac3f824-7153-43b1-8211-a2f67cdd5e68.jpg?v=1725929670&width=176",
           "category": "Mobile",
@@ -177,7 +177,7 @@
           "rating": 4.8
         },
         {
-          "product_id": "MOB10",
+          "product_id": "12",
           "product_title": "Samsung Galaxy S22",
           "product_image": "https://images.samsung.com/is/image/samsung/p6pim/levant/2202/gallery/levant-galaxy-s22-ultra-s908-413037-sm-s908ezggmea-530970243",
           "category": "Mobile",
@@ -193,7 +193,7 @@
           "rating": 4.7
         },
         {
-          "product_id": "MOB11",
+          "product_id": "13",
           "product_title": "Google Pixel 7 Pro",
           "product_image": "https://www.mobiledokan.com/media/google-pixel-7-pro-obsidian-official-image.webp",
           "category": "Mobile",
@@ -209,7 +209,7 @@
           "rating": 4.6
         },
         {
-          "product_id": "CAM002",
+          "product_id": "14",
           "product_title": "Canon EOS R5",
           "product_image": "https://www.gigaparts.com/media/catalog/product/cache/002dc70ccef261c78c46589b619436fc/1/_/1_700x_1_.png",
           "category": "Camera",
@@ -225,7 +225,7 @@
           "rating": 4.9
         },
         {
-          "product_id": "TAB003",
+          "product_id": "15",
           "product_title": "iPad Pro M2",
           "product_image": "https://mcsolution.com.bd/wp-content/uploads/2022/11/ipad-pro-m2-2022-11-inch-silver-price-in-bangladesh-MC-Solution-BD.webp",
           "category": "Tablet",
@@ -241,7 +241,7 @@
           "rating": 4.9
         },
         {
-          "product_id": "LAP001",
+          "product_id": "16",
           "product_title": "MacBook Pro 16-inch M2 Max",
           "product_image": "https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/02/macbook-pro-m2-max-xda-review-202300158.jpg",
           "category": "Laptop",
@@ -257,7 +257,7 @@
           "rating": 4.8
         },
         {
-          "product_id": "LAP002",
+          "product_id": "17",
           "product_title": "Dell XPS 15",
           "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/XPS-15-9530-c-1421.jpg",
           "category": "Laptop",
@@ -273,7 +273,7 @@
           "rating": 4.7
         },
         {
-          "product_id": "SWT001",
+          "product_id": "18",
           "product_title": "Apple Watch Series 9",
           "product_image": "https://www.ryans.com/storage/products/main/apple-watch-series-9-41mm-gps-midnight-aluminum-11701515076.webp",
           "category": "Smart Watch",
@@ -289,7 +289,7 @@
           "rating": 4.9
         },
         {
-          "product_id": "SWT002",
+          "product_id": "19",
           "product_title": "Samsung Galaxy Watch 6",
           "product_image": "https://images.samsung.com/ca/galaxy-watch6/feature/galaxy-watch6-kv-pc.jpg",
           "category": "Smart Watch",
@@ -305,7 +305,7 @@
           "rating": 4.8
         },
         {
-          "product_id": "SWT003",
+          "product_id": "20",
           "product_title": "Garmin Fenix 7X",
           "product_image": "https://res.garmin.com/en/products/010-02540-34/v/cf-sm.jpg",
           "category": "Smart Watch",
