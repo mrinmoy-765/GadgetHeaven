@@ -1,5 +1,8 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { FaCartShopping } from "react-icons/fa6";
+import { CiHeart } from "react-icons/ci";
+import { addToStoreCartList, addToStoreWishList } from "../Utility/addToDb";
 
 const GadgetDetails = () => {
   const { product_id } = useParams();
@@ -8,28 +11,36 @@ const GadgetDetails = () => {
   const data = useLoaderData();
   console.log("Data from useLoaderData:", data);
 
-  console.log("Params product_id:", product_id); // Check if useParams is providing correct id
-  console.log("Parsed ID:", id);
-  console.log("Data from useLoaderData():", data); // Check if data is being received correctly
+  // console.log("Params product_id:", product_id); // Check if useParams is providing correct id
+  // console.log("Parsed ID:", id);
+  // console.log("Data from useLoaderData():", data); // Check if data is being received correctly
 
   //const gadget = data.find((Gadget) => Gadget.product_id === id);
   const gadget = data.find(
     (Gadget) => String(Gadget.product_id) === String(id)
   );
 
-  console.log("Found gadget:", gadget); // Check if gadget is found
+  //console.log("Found gadget:", gadget); // Check if gadget is found
 
   const {
     product_id: currentPrroductId,
     product_title,
     product_image,
-    category,
     price,
     description,
     Specification,
     availability,
     rating,
   } = gadget;
+
+  const handleAddToCart = (id) => {
+    addToStoreCartList(id);
+  };
+
+  const handleAddToWishList = (id) => {
+    addToStoreWishList(id);
+  };
+
   return (
     <div>
       <div className="bg-purple-500 pt-10 pb-64 text-center">
@@ -80,6 +91,22 @@ const GadgetDetails = () => {
                 {rating}
               </span>
             </p>
+            {/* buttons */}
+            <div className="flex">
+              <button
+                onClick={() => handleAddToCart(currentPrroductId)}
+                className="flex items-center gap-2 text-base font-bold text-white px-6 py-2 bg-purple-500 rounded-3xl mt-3"
+              >
+                Add To Cart
+                <FaCartShopping />
+              </button>
+              <button
+                onClick={() => handleAddToWishList(currentPrroductId)}
+                className="p-2 mt-3.5 ml-6 border border-gray-400 hover:bg-gray-300 rounded-full flex items-center justify-center"
+              >
+                <CiHeart className="text-2xl" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
