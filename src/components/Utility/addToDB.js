@@ -15,7 +15,8 @@ const addToStoreCartList = (id) =>{
     }else{
         storedList.push(id);
         const storedListStr = JSON.stringify(storedList);
-        localStorage.setItem('cart-list',storedListStr)
+        localStorage.setItem('cart-list',storedListStr);
+        alert("Gadget added in your Cart!!!");
     }
 }
 
@@ -42,7 +43,8 @@ const addToStoreWishList = (id) =>{
     }else{
         storedWish.push(id);
         const storedWishStr = JSON.stringify(storedWish);
-        localStorage.setItem('wish-list',storedWishStr)
+        localStorage.setItem('wish-list',storedWishStr);
+        alert("Gadget added in your WishList!!!");
     }
 }
 
