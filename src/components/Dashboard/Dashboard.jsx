@@ -5,7 +5,7 @@ import Cart from "../Cart/Cart";
 import WishList from "../WishList/WishList";
 
 const Dashboard = () => {
-  const [visibleDiv, setVisibleDiv] = useState("Cart");
+  const [visibleDiv, setVisibleDiv] = useState("Cart"); // Set default to Cart
   const [cartList, setstoreCartlist] = useState([]);
   const [wishList, setstoreWishlist] = useState([]);
 
@@ -21,13 +21,45 @@ const Dashboard = () => {
       storeCartlist.includes(String(product.product_id))
     );
 
-    const filteredWishtList = allProducts.filter((product) =>
+    const filteredWishList = allProducts.filter((product) =>
       storeWishList.includes(String(product.product_id))
     );
 
     setstoreCartlist(filteredCartList);
-    setstoreWishlist(filteredWishtList);
+    setstoreWishlist(filteredWishList);
   }, [allProducts]);
+
+  // Function to handle product removal(wish list)
+  const handleRemoveProduct = (id) => {
+    const updatedWishList = wishList.filter(
+      (product) => product.product_id !== id
+    );
+    setstoreWishlist(updatedWishList);
+
+    // Update local storage
+    const storedWishList = JSON.parse(localStorage.getItem("wish-list")) || [];
+    const updatedStoredWishList = storedWishList.filter(
+      (productId) => productId !== String(id)
+    );
+
+    localStorage.setItem("wish-list", JSON.stringify(updatedStoredWishList));
+  };
+
+  // Function to handle product removal(cart list)
+  const handleRemoveProduct2 = (id) => {
+    const updatedCartList = cartList.filter(
+      (product) => product.product_id !== id
+    );
+    setstoreCartlist(updatedCartList);
+
+    // Update local storage
+    const storedCartList = JSON.parse(localStorage.getItem("cart-list")) || [];
+    const updatedStoredCartList = storedCartList.filter(
+      (productId) => productId !== String(id)
+    );
+
+    localStorage.setItem("cart-list", JSON.stringify(updatedStoredCartList));
+  };
 
   return (
     <div>
@@ -67,14 +99,19 @@ const Dashboard = () => {
       {/* Cart Section */}
       {visibleDiv === "Cart" && (
         <div className="p-4 bg-base-200 shadow-md">
-          <p>This is your cart</p>
           <div className="grid grid-cols-1 gap-6">
             {cartList.length > 0 ? (
               cartList.map((product) => (
-                <Cart key={product.product_id} product={product} />
+                <Cart
+                  key={product.product_id}
+                  product={product}
+                  onRemoveCart={handleRemoveProduct2}
+                />
               ))
             ) : (
-              <p>No items in cart</p>
+              <p className="text-2xl font-extrabold text-red-500 text-center">
+                No items in cart
+              </p>
             )}
           </div>
         </div>
@@ -87,10 +124,16 @@ const Dashboard = () => {
           <div className="grid grid-cols-1 gap-6">
             {wishList.length > 0 ? (
               wishList.map((product) => (
-                <WishList key={product.product_id} product={product} />
+                <WishList
+                  key={product.product_id}
+                  product={product}
+                  onRemove={handleRemoveProduct}
+                />
               ))
             ) : (
-              <p>No items in wishlist</p>
+              <p className="text-2xl font-extrabold text-red-500 text-center">
+                No items in wishlist
+              </p>
             )}
           </div>
         </div>

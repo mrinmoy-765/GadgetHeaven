@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import { FaCartShopping } from "react-icons/fa6";
 import { addToStoreCartList } from "../Utility/addToDb";
+import { CiCircleRemove } from "react-icons/ci";
 
-const WishList = ({ product }) => {
-  const { prouct_id, product_title, product_image, price, description } =
+const WishList = ({ product, onRemove }) => {
+  const { product_id, product_title, product_image, price, description } =
     product;
 
   const handleAddToCart = (id) => {
@@ -12,9 +13,9 @@ const WishList = ({ product }) => {
   };
 
   return (
-    <div className="p-4 rounded-lg  bg-white flex">
+    <div className="p-4 rounded-lg bg-white flex relative">
       <div>
-        <figure className=" py-2 flex justify-center">
+        <figure className="py-2 flex justify-center">
           <img
             src={product_image}
             alt={product_title}
@@ -29,19 +30,26 @@ const WishList = ({ product }) => {
         </p>
         <p className="font-semibold text-lg">${price}</p>
         <button
-          onClick={() => handleAddToCart(prouct_id)}
+          onClick={() => handleAddToCart(product_id)}
           className="flex items-center gap-2 text-base font-bold text-white px-6 py-2 bg-purple-500 rounded-3xl mt-5"
         >
           Add To Cart
           <FaCartShopping />
         </button>
       </div>
+      <button
+        onClick={() => onRemove(product_id)}
+        className="absolute top-2 right-2 text-2xl font-semibold text-red-400"
+      >
+        <CiCircleRemove />
+      </button>
     </div>
   );
 };
 
-export default WishList;
-
 WishList.propTypes = {
-  product: PropTypes.object,
+  product: PropTypes.object.isRequired,
+  onRemove: PropTypes.func.isRequired,
 };
+
+export default WishList;
