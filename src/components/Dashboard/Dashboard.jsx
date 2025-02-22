@@ -3,11 +3,17 @@ import { useLoaderData } from "react-router-dom";
 import { getStoredCartList, getStoredWishList } from "../Utility/addToDB";
 import Cart from "../Cart/Cart";
 import WishList from "../WishList/WishList";
+import { LiaSortAmountDownSolid } from "react-icons/lia";
 
 const Dashboard = () => {
   const [visibleDiv, setVisibleDiv] = useState("Cart"); // Set default to Cart
   const [cartList, setstoreCartlist] = useState([]);
   const [wishList, setstoreWishlist] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    setTotalPrice(getTotalPrice(cartList)); // Update total price when cartList changes
+  }, [cartList]);
 
   const allProducts = useLoaderData();
 
@@ -61,6 +67,16 @@ const Dashboard = () => {
     localStorage.setItem("cart-list", JSON.stringify(updatedStoredCartList));
   };
 
+  const sortByPrice = () => {
+    const sortedList = [...cartList].sort((a, b) => b.price - a.price);
+    setstoreCartlist(sortedList);
+  };
+
+  const getTotalPrice = (cartList) => {
+    if (!Array.isArray(cartList) || cartList.length === 0) return 0;
+    return cartList.reduce((sum, product) => sum + product.price, 0).toFixed(2);
+  };
+
   return (
     <div>
       <div className="text-center bg-purple-500 pt-7 pb-10">
@@ -99,6 +115,31 @@ const Dashboard = () => {
       {/* Cart Section */}
       {visibleDiv === "Cart" && (
         <div className="p-4 bg-base-200 shadow-md">
+          <div className="mb-3 flex justify-between items-center">
+            <div>
+              <h1 className="text-2xl font-bold">Cart</h1>
+            </div>
+            <div className="flex items-center gap-4">
+              {" "}
+              {/* Ensures proper alignment */}
+              <span className="text-base font-bold">
+                Total Price: ${totalPrice}
+              </span>
+              <button
+                onClick={sortByPrice}
+                className="bg-white text-lg text-purple-500 border border-purple-500 border-b-pink-500 rounded-3xl px-4 py-1.5 flex items-center"
+              >
+                Sort by Price
+                <LiaSortAmountDownSolid className="ml-2" />
+              </button>
+              <button
+                type="button"
+                className="text-white bg-gradient-to-b from-purple-500 via-pink-300 to-pink-500 hover:bg-gradient-to-br font-medium rounded-3xl text-lg px-4 py-1.5 text-center me-2 mb-2 border-0 mt-1.5"
+              >
+                Purchase
+              </button>
+            </div>
+          </div>
           <div className="grid grid-cols-1 gap-6">
             {cartList.length > 0 ? (
               cartList.map((product) => (

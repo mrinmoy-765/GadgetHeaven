@@ -9,7 +9,7 @@ const GadgetDetails = () => {
   const id = parseInt(product_id);
 
   const data = useLoaderData();
-  console.log("Data from useLoaderData:", data);
+  //console.log("Data from useLoaderData:", data);
 
   // console.log("Params product_id:", product_id); // Check if useParams is providing correct id
   // console.log("Parsed ID:", id);

@@ -8,18 +8,6 @@ const Cart = ({ product, onRemoveCart }) => {
 
   return (
     <div>
-      <div className="mb-3 flex justify-between">
-        <div>
-          <h1 className="text-2xl font-bold">Cart</h1>
-        </div>
-        <div>
-          <span>Total Price: $500</span>
-          <button className="bg-white text-lg text-purple-500 border border-purple-500 border-b-pink-500 rounded-3xl px-4 py-1.5 mx-1.5">
-            Sort by Price
-          </button>
-          <button>Purchase</button>
-        </div>
-      </div>
       <div className="p-4 rounded-lg  bg-white flex relative">
         <div>
           <figure className=" py-2 flex justify-center">
