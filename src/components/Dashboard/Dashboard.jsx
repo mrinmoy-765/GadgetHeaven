@@ -77,6 +77,17 @@ const Dashboard = () => {
     return cartList.reduce((sum, product) => sum + product.price, 0).toFixed(2);
   };
 
+  const purchase = () => {
+    // Remove cart data from local storage
+    localStorage.removeItem("cart-list");
+
+    // Clear the cart state
+    setstoreCartlist([]);
+
+    // Show payment success message with total price
+    alert(`Payment Successful!! Total: ${totalPrice}`);
+  };
+
   return (
     <div>
       <div className="text-center bg-purple-500 pt-7 pb-10">
@@ -134,6 +145,7 @@ const Dashboard = () => {
               </button>
               <button
                 type="button"
+                onClick={purchase}
                 className="text-white bg-gradient-to-b from-purple-500 via-pink-300 to-pink-500 hover:bg-gradient-to-br font-medium rounded-3xl text-lg px-4 py-1.5 text-center me-2 mb-2 border-0 mt-1.5"
               >
                 Purchase
@@ -161,7 +173,7 @@ const Dashboard = () => {
       {/* Wishlist Section */}
       {visibleDiv === "WishList" && (
         <div className="p-4 bg-base-200 shadow-md">
-          <p>This is your wishlist</p>
+          <p className="text-2xl text-gray-500 font-bold">Wishlist</p>
           <div className="grid grid-cols-1 gap-6">
             {wishList.length > 0 ? (
               wishList.map((product) => (
