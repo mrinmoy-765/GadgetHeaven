@@ -3,8 +3,17 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import { addToStoreCartList, addToStoreWishList } from "../Utility/addToDb";
+import ReactStars from "react-rating-stars-component";
+import { FaStar } from "react-icons/fa";
 
 const GadgetDetails = () => {
+  const colors = {
+    orange: "#F2C265",
+    grey: "a9a9a9",
+  };
+
+  const stars = Array(5).fill(0);
+
   const { product_id } = useParams();
   const id = parseInt(product_id);
 
@@ -81,16 +90,18 @@ const GadgetDetails = () => {
                 <li key={index}>✔ {spec}</li>
               ))}
             </ul>
-            <p className="font-semibold text-base mt-3">Rating</p>
-            <p className="text-yellow-500 text-lg">
-              {Array.from({ length: Math.floor(rating) }, (_, index) => (
-                <span key={index}>⭐</span>
-              ))}{" "}
-              <span className="text-base font-semi text-gray-500">
-                {" "}
-                {rating}
-              </span>
-            </p>
+
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "15px" }}>
+              {stars.map((_, index) => (
+                <FaStar
+                  key={index}
+                  size={24}
+                  color={rating > index ? colors.orange : colors.grey}
+                />
+              ))}
+              <p style={{ margin: 0 }}>({rating} Stars)</p>
+            </div>
+
             {/* buttons */}
             <div className="flex">
               <button

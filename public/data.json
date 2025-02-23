@@ -206,7 +206,7 @@
             "Android 14"
           ],
           "availability": true,
-          "rating": 4.6
+          "rating": 4.2
         },
         {
           "product_id": "14",
@@ -254,7 +254,7 @@
             "macOS Ventura"
           ],
           "availability": true,
-          "rating": 4.8
+          "rating": 3.8
         },
         {
           "product_id": "17",
@@ -270,7 +270,7 @@
             "Windows 11 Pro"
           ],
           "availability": true,
-          "rating": 4.7
+          "rating": 2.7
         },
         {
           "product_id": "18",
