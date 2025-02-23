@@ -6,7 +6,7 @@ const Gadget = ({ gadget }) => {
   const { product_id, product_title, product_image, price } = gadget;
 
   return (
-    <div className="card bg-base-100 w-96  ">
+    <div className="card bg-base-100 w-auto  ">
       <figure className="w-full h-64 p-4">
         <img
           src={product_image}
@@ -31,7 +31,6 @@ const Gadget = ({ gadget }) => {
   );
 };
 
-// ✅ Define PropTypes for validation
 Gadget.propTypes = {
   gadget: PropTypes.shape({
     product_id: PropTypes.string.isRequired,

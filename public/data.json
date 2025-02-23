@@ -3,7 +3,7 @@
       "product_id": "1",
       "product_title": "iPhone 15 Pro",
       "product_image": "https://www.sotophone.com/wp-content/uploads/2023/09/apple-iphone-15-pro-max-1.jpg",
-      "category": "Mobile",
+      "category": "iPhone",
       "price": 1099,
       "description": "The latest iPhone with A17 Bionic chip and Dynamic Island.",
       "Specification": [
@@ -19,7 +19,7 @@
       "product_id": "2",
       "product_title": "Samsung Galaxy S23 Ultra",
       "product_image": "https://images-cdn.ubuy.co.id/660c02105bc7a6552c68748d-samsung-galaxy-s23-ultra-5g-sm-s918b-ds.jpg",
-      "category": "Mobile",
+      "category": "Phones",
       "price": 1199,
       "description": "A flagship smartphone with a 200MP camera and S Pen support.",
       "Specification": [
@@ -35,7 +35,7 @@
       "product_id": "3",
       "product_title": "Google Pixel 8 Pro",
       "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Pixel-8-Pro-Obsidian-7046.jpg",
-      "category": "Mobile",
+      "category": "Phones",
       "price": 999,
       "description": "Google's best AI-powered smartphone with Tensor G3 chip.",
       "Specification": [
@@ -51,7 +51,7 @@
       "product_id": "4",
       "product_title": "OnePlus 11 5G",
       "product_image": "https://image01.oneplus.net/ebp/202301/11/1-M00-42-E5-CkvTlmO-dPWANpKzAAJoBrhAYus595.png",
-      "category": "Mobile",
+      "category": "Phones",
       "price": 799,
       "description": "A high-performance smartphone with Hasselblad-tuned cameras.",
       "Specification": [
@@ -67,7 +67,7 @@
       "product_id": "5",
       "product_title": "Xiaomi 13 Pro",
       "product_image": "https://cdn.prod.website-files.com/64ff10d1e6f88be0d9bd0890/66268a7e3312a8963152b671_xiaomi_13_pro.webp",
-      "category": "Mobile",
+      "category": "Phones",
       "price": 899,
       "description": "A powerful smartphone with Leica-powered cameras.",
       "Specification": [
@@ -83,7 +83,7 @@
       "product_id": "6",
       "product_title": "Sony Xperia 1 V",
       "product_image": "https://swpno.com/wp-content/uploads/2024/01/sony-xperia-1-v-price-in-bangladesh-2.webp",
-      "category": "Mobile",
+      "category": "Phones",
       "price": 1199,
       "description": "A phone with a 4K OLED display and professional-grade cameras.",
       "Specification": [
@@ -164,7 +164,7 @@
           "product_id": "11",
           "product_title": "iPhone 16 Pro",
           "product_image": "https://www.istudio.store/cdn/shop/files/iPhone_16_Pro_White_Titanium_TH_1_1ac3f824-7153-43b1-8211-a2f67cdd5e68.jpg?v=1725929670&width=176",
-          "category": "Mobile",
+          "category": "iPhone",
           "price": 1099,
           "description": "The latest iPhone with A17 Bionic chip and Dynamic Island.",
           "Specification": [
@@ -180,7 +180,7 @@
           "product_id": "12",
           "product_title": "Samsung Galaxy S22",
           "product_image": "https://images.samsung.com/is/image/samsung/p6pim/levant/2202/gallery/levant-galaxy-s22-ultra-s908-413037-sm-s908ezggmea-530970243",
-          "category": "Mobile",
+          "category": "Phones",
           "price": 1199,
           "description": "A flagship smartphone with a 200MP camera and S Pen support.",
           "Specification": [
@@ -195,8 +195,8 @@
         {
           "product_id": "13",
           "product_title": "Google Pixel 7 Pro",
-          "product_image": "https://www.mobiledokan.com/media/google-pixel-7-pro-obsidian-official-image.webp",
-          "category": "Mobile",
+          "product_image": "https://images-cdn.ubuy.co.in/651546e3124186167265e27b-google-pixel-7-pro-5g-android-phone.jpg",
+          "category": "Phones",
           "price": 999,
           "description": "Google's best AI-powered smartphone with Tensor G3 chip.",
           "Specification": [
@@ -244,7 +244,7 @@
           "product_id": "16",
           "product_title": "MacBook Pro 16-inch M2 Max",
           "product_image": "https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/02/macbook-pro-m2-max-xda-review-202300158.jpg",
-          "category": "Laptop",
+          "category": "MacBook",
           "price": 3499,
           "description": "Apple's most powerful MacBook with the M2 Max chip.",
           "Specification": [
@@ -260,9 +260,9 @@
           "product_id": "17",
           "product_title": "Dell XPS 15",
           "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/XPS-15-9530-c-1421.jpg",
-          "category": "Laptop",
+          "category": "Laptops",
           "price": 2299,
-          "description": "A high-end Windows laptop with an OLED display.",
+          "description": "A high-end Windows Laptops with an OLED display.",
           "Specification": [
             "15.6-inch 3.5K OLED display",
             "Intel Core i9-13900H",
@@ -276,7 +276,7 @@
           "product_id": "18",
           "product_title": "Apple Watch Series 9",
           "product_image": "https://www.ryans.com/storage/products/main/apple-watch-series-9-41mm-gps-midnight-aluminum-11701515076.webp",
-          "category": "Smart Watch",
+          "category": "Smart Watches",
           "price": 399,
           "description": "The latest Apple Watch with new health features and an Always-On display.",
           "Specification": [
@@ -292,7 +292,7 @@
           "product_id": "19",
           "product_title": "Samsung Galaxy Watch 6",
           "product_image": "https://images.samsung.com/ca/galaxy-watch6/feature/galaxy-watch6-kv-pc.jpg",
-          "category": "Smart Watch",
+          "category": "Smart Watches",
           "price": 349,
           "description": "A premium smartwatch with advanced health tracking and Wear OS.",
           "Specification": [
@@ -308,7 +308,7 @@
           "product_id": "20",
           "product_title": "Garmin Fenix 7X",
           "product_image": "https://res.garmin.com/en/products/010-02540-34/v/cf-sm.jpg",
-          "category": "Smart Watch",
+          "category": "Smart Watches",
           "price": 899,
           "description": "A rugged GPS smartwatch for extreme sports and outdoor activities.",
           "Specification": [
