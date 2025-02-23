@@ -8,8 +8,11 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import successIcon from "../../assets/Group.png";
+import useDocumentTitle from "../../useDocumentTitle";
 
 const Dashboard = () => {
+  useDocumentTitle("GadgetHeaven || Dashboard");
+
   const [visibleDiv, setVisibleDiv] = useState("Cart"); // Set default to Cart
   const [cartList, setstoreCartlist] = useState([]);
   const [wishList, setstoreWishlist] = useState([]);

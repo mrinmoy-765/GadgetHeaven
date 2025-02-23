@@ -8,8 +8,10 @@ import bundleOffer5 from "../../assets/offers/gaming-chair-offer-400x400.webp";
 import bundleOffer6 from "../../assets/offers/corsair-week-400x400.webp";
 import { LiaCalendarSolid } from "react-icons/lia";
 import { CiShop } from "react-icons/ci";
+import useDocumentTitle from "../../useDocumentTitle";
 
 const Offer = () => {
+  useDocumentTitle("GadgetHeaven || Offer");
   return (
     <div>
       <div className="flex items-center mt-1.5 ml-2.5 gap-2 w-full">
@@ -45,9 +47,13 @@ const Offer = () => {
             </div>
             <div className="divider"></div>
             <div className="text-center">
-            <h1 className="font-semibold text-2xl">Bundle Offer</h1>
-            <p className="text-base text-gray-500 my-3">Buy Together, Save More!</p>
-            <button className="btn btn-outline btn-primary">View Details</button>
+              <h1 className="font-semibold text-2xl">Bundle Offer</h1>
+              <p className="text-base text-gray-500 my-3">
+                Buy Together, Save More!
+              </p>
+              <button className="btn btn-outline btn-primary">
+                View Details
+              </button>
             </div>
           </div>
         </div>
@@ -76,9 +82,15 @@ const Offer = () => {
             </div>
             <div className="divider"></div>
             <div className="text-center">
-            <h1 className="font-semibold text-lg">Nagad | 64 District Free Delivery Offer</h1>
-            <p className="text-base text-gray-500 my-3">Pay with Nagad & Enjoy 64 District Free Delivery Offer!</p>
-            <button className="btn btn-outline btn-primary">View Details</button>
+              <h1 className="font-semibold text-lg">
+                Nagad | 64 District Free Delivery Offer
+              </h1>
+              <p className="text-base text-gray-500 my-3">
+                Pay with Nagad & Enjoy 64 District Free Delivery Offer!
+              </p>
+              <button className="btn btn-outline btn-primary">
+                View Details
+              </button>
             </div>
           </div>
         </div>
@@ -104,9 +116,15 @@ const Offer = () => {
             </div>
             <div className="divider"></div>
             <div className="text-center">
-            <h1 className="font-semibold text-lg">bKash 10% Instant Cashback Offer!</h1>
-            <p className="text-base text-gray-500 my-3">Pay with bKash & Enjoy 10% Instant Cashback!</p>
-            <button className="btn btn-outline btn-primary">View Details</button>
+              <h1 className="font-semibold text-lg">
+                bKash 10% Instant Cashback Offer!
+              </h1>
+              <p className="text-base text-gray-500 my-3">
+                Pay with bKash & Enjoy 10% Instant Cashback!
+              </p>
+              <button className="btn btn-outline btn-primary">
+                View Details
+              </button>
             </div>
           </div>
         </div>
@@ -134,9 +152,16 @@ const Offer = () => {
             </div>
             <div className="divider"></div>
             <div className="text-center">
-            <h1 className="font-semibold text-2xl">OCPC Graphics Card Offer</h1>
-            <p className="text-base text-gray-500 my-3">Get a Free OCPC LTR Mouse Pad with every OCPC GeForce RTX 3060 Graphics Card</p>
-            <button className="btn btn-outline btn-primary">View Details</button>
+              <h1 className="font-semibold text-2xl">
+                OCPC Graphics Card Offer
+              </h1>
+              <p className="text-base text-gray-500 my-3">
+                Get a Free OCPC LTR Mouse Pad with every OCPC GeForce RTX 3060
+                Graphics Card
+              </p>
+              <button className="btn btn-outline btn-primary">
+                View Details
+              </button>
             </div>
           </div>
         </div>
@@ -164,9 +189,13 @@ const Offer = () => {
             </div>
             <div className="divider"></div>
             <div className="text-center">
-            <h1 className="font-semibold text-2xl">Gaming Chair Offer</h1>
-            <p className="text-base text-gray-500 my-3">Buy Gaming Chair & Get Exciting Discount!</p>
-            <button className="btn btn-outline btn-primary">View Details</button>
+              <h1 className="font-semibold text-2xl">Gaming Chair Offer</h1>
+              <p className="text-base text-gray-500 my-3">
+                Buy Gaming Chair & Get Exciting Discount!
+              </p>
+              <button className="btn btn-outline btn-primary">
+                View Details
+              </button>
             </div>
           </div>
         </div>
@@ -194,9 +223,13 @@ const Offer = () => {
             </div>
             <div className="divider"></div>
             <div className="text-center">
-            <h1 className="font-semibold text-2xl">AOC Monitor Offer</h1>
-            <p className="text-base text-gray-500 my-3">Buy Selected AOC Monitor & Get Exciting Gifts View Details</p>
-            <button className="btn btn-outline btn-primary">View Details</button>
+              <h1 className="font-semibold text-2xl">AOC Monitor Offer</h1>
+              <p className="text-base text-gray-500 my-3">
+                Buy Selected AOC Monitor & Get Exciting Gifts View Details
+              </p>
+              <button className="btn btn-outline btn-primary">
+                View Details
+              </button>
             </div>
           </div>
         </div>
