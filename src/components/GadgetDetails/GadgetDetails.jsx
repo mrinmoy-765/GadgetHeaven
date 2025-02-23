@@ -3,7 +3,6 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import { addToStoreCartList, addToStoreWishList } from "../Utility/addToDb";
-import ReactStars from "react-rating-stars-component";
 import { FaStar } from "react-icons/fa";
 
 const GadgetDetails = () => {
@@ -91,7 +90,14 @@ const GadgetDetails = () => {
               ))}
             </ul>
 
-            <div style={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "15px" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                marginTop: "15px",
+              }}
+            >
               {stars.map((_, index) => (
                 <FaStar
                   key={index}
@@ -111,6 +117,7 @@ const GadgetDetails = () => {
                 Add To Cart
                 <FaCartShopping />
               </button>
+
               <button
                 onClick={() => handleAddToWishList(currentPrroductId)}
                 className="p-2 mt-3.5 ml-6 border border-gray-400 hover:bg-gray-300 rounded-full flex items-center justify-center"

@@ -4,12 +4,17 @@ import { getStoredCartList, getStoredWishList } from "../Utility/addToDB";
 import Cart from "../Cart/Cart";
 import WishList from "../WishList/WishList";
 import { LiaSortAmountDownSolid } from "react-icons/lia";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
+import successIcon from "../../assets/Group.png";
 
 const Dashboard = () => {
   const [visibleDiv, setVisibleDiv] = useState("Cart"); // Set default to Cart
   const [cartList, setstoreCartlist] = useState([]);
   const [wishList, setstoreWishlist] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTotalPrice(getTotalPrice(cartList)); // Update total price when cartList changes
@@ -84,8 +89,40 @@ const Dashboard = () => {
     // Clear the cart state
     setstoreCartlist([]);
 
-    // Show payment success message with total price
-    alert(`Payment Successful!! Total: ${totalPrice}`);
+    const ToastContent = ({ closeToast }) => (
+      <div className="flex flex-col items-center text-center w-full">
+        <img src={successIcon} alt="Success" className="w-12 h-12 mb-2" />
+
+        <p className="text-lg font-semibold text-green-700">
+          Payment Successful!!
+        </p>
+
+        <hr className="w-full my-2 border-gray-300" />
+
+        <p className="text-sm text-gray-600 my-3.5">Thanks for Purchasing</p>
+        <p className="text-sm font-bold">Total: ${totalPrice}</p>
+
+        <button
+          onClick={() => {
+            closeToast();
+            navigate("/");
+          }}
+          className="mt-7 px-6 py-2 bg-gray-700 text-white font-bold rounded-2xl hover:bg-red-500"
+        >
+          Close
+        </button>
+      </div>
+    );
+
+    toast(<ToastContent />, {
+      position: "top-center",
+      autoClose: false,
+      closeOnClick: false,
+      closeButton: false,
+      className: "flex justify-center items-center w-full", // Centers content
+      bodyClassName: "text-center", // Centers text inside body
+      toastId: "custom-toast", // Prevents duplicates
+    });
   };
 
   return (
@@ -137,12 +174,11 @@ const Dashboard = () => {
                 Total Price: ${totalPrice}
               </span>
               <button
-              disabled={cartList.length === 0} // your disable logic goes here
+                disabled={cartList.length === 0 || 1}
                 onClick={sortByPrice}
                 className={`bg-white text-lg text-purple-500 border border-purple-500 border-b-pink-500 rounded-3xl px-4 py-1.5 flex items-center ${
-                  cartList.length === 0 ? "opacity-50 cursor-not-allowed" : ""
+                  cartList.length <= 1 ? "opacity-50 cursor-not-allowed" : ""
                 }`}
-                
               >
                 Sort by Price
                 <LiaSortAmountDownSolid className="ml-2" />
@@ -150,7 +186,7 @@ const Dashboard = () => {
               <button
                 type="button"
                 onClick={purchase}
-                // disabled={cartList.length === 0} // your disable logic goes here
+                // disabled={cartList.length === 0}
                 className={`text-white bg-gradient-to-b from-purple-500 via-pink-300 to-pink-500 hover:bg-gradient-to-br font-medium rounded-3xl text-lg px-4 py-1.5 text-center me-2 mb-2 border-0 mt-1.5 ${
                   cartList.length === 0 ? "opacity-50 cursor-not-allowed" : ""
                 }`}
