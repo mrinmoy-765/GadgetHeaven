@@ -26,6 +26,16 @@ const links = (
         Dashboard
       </NavLink>
     </li>
+    <li>
+      <NavLink
+        to="/offer"
+        className={({ isActive }) => {
+          return isActive ? "underline decoration-2" : "";
+        }}
+      >
+        Offers
+      </NavLink>
+    </li>
   </>
 );
 

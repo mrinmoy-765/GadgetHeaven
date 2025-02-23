@@ -5,6 +5,7 @@ import Root from "./components/Root/Root.jsx";
 import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
 import Home from "./components/Home/Home.jsx";
 import GadgetDetails from "./components/GadgetDetails/GadgetDetails.jsx";
+import Offer from "./components/Offer/Offer.jsx";
 
 import {
   createBrowserRouter,
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         
         element: <Dashboard></Dashboard>,
         loader: () => fetch("/data.json"),
+      },
+      {
+        path: "/offer",
+        element: <Offer></Offer>,
       },
     ],
   },
