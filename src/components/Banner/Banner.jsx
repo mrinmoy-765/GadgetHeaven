@@ -1,5 +1,6 @@
 import React from "react";
 import BannerImage from "../../assets/banner.jpg";
+import { NavLink } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -14,15 +15,20 @@ const Banner = () => {
           level. From smart devices to <br />
           the coolest accessories, we have it all!
         </p>
-        <button className="mt-2 bg-white rounded-4xl py-2 px-6 text-lg font-bold text-purple-500">
-          Shop Now
-        </button>
+
+        <NavLink to="/dashboard">
+          <button className="mt-2 bg-white rounded-4xl py-2 px-6 text-lg font-bold text-purple-500">
+            Shop Now
+          </button>
+        </NavLink>
       </div>
 
       {/* Image Section with Blur Effect */}
       <div className="flex justify-center">
-        <div className="relative bottom-32 w-3/5 rounded-3xl border-2 border-white p-4 
-                        bg-white/30 backdrop-blur-lg">
+        <div
+          className="relative bottom-32 w-3/5 rounded-3xl border-2 border-white p-4 
+                        bg-white/30 backdrop-blur-lg"
+        >
           <img src={BannerImage} alt="" className="w-full h-88 rounded-2xl" />
         </div>
       </div>
@@ -31,4 +37,3 @@ const Banner = () => {
 };
 
 export default Banner;
-

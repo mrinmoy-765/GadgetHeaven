@@ -137,8 +137,12 @@ const Dashboard = () => {
                 Total Price: ${totalPrice}
               </span>
               <button
+              disabled={cartList.length === 0} // your disable logic goes here
                 onClick={sortByPrice}
-                className="bg-white text-lg text-purple-500 border border-purple-500 border-b-pink-500 rounded-3xl px-4 py-1.5 flex items-center"
+                className={`bg-white text-lg text-purple-500 border border-purple-500 border-b-pink-500 rounded-3xl px-4 py-1.5 flex items-center ${
+                  cartList.length === 0 ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+                
               >
                 Sort by Price
                 <LiaSortAmountDownSolid className="ml-2" />
@@ -146,7 +150,10 @@ const Dashboard = () => {
               <button
                 type="button"
                 onClick={purchase}
-                className="text-white bg-gradient-to-b from-purple-500 via-pink-300 to-pink-500 hover:bg-gradient-to-br font-medium rounded-3xl text-lg px-4 py-1.5 text-center me-2 mb-2 border-0 mt-1.5"
+                // disabled={cartList.length === 0} // your disable logic goes here
+                className={`text-white bg-gradient-to-b from-purple-500 via-pink-300 to-pink-500 hover:bg-gradient-to-br font-medium rounded-3xl text-lg px-4 py-1.5 text-center me-2 mb-2 border-0 mt-1.5 ${
+                  cartList.length === 0 ? "opacity-50 cursor-not-allowed" : ""
+                }`}
               >
                 Purchase
               </button>
