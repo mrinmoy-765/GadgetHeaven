@@ -8,6 +8,7 @@ import GadgetDetails from "./components/GadgetDetails/GadgetDetails.jsx";
 import Offer from "./components/Offer/Offer.jsx";
 import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ProductChart from "./components/ProductChart/ProductChart.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
         loader: () => fetch("/data.json"),
       },
       { path: "/offer", element: <Offer /> },
+      {
+        path: "/productChart",
+        element: <ProductChart />,
+      },
     ],
   },
 ]);

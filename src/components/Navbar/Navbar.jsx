@@ -9,7 +9,9 @@ const Navbar = () => {
 
   // Check if the current route is "/dashboard" or "/offer"
   const isWhiteNavbar =
-    location.pathname === "/dashboard" || location.pathname === "/offer";
+    location.pathname === "/dashboard" ||
+    location.pathname === "/offer" ||
+    location.pathname === "/ProductChart";
 
   return (
     <div>
@@ -97,7 +99,12 @@ const NavLinks = () => (
       </NavLink>
     </li>
     <li>
-      <a href="">Statistics</a>
+      <NavLink
+        to="/ProductChart"
+        className={({ isActive }) => (isActive ? "underline decoration-2" : "")}
+      >
+        Statistics
+      </NavLink>
     </li>
     <li>
       <NavLink
