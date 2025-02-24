@@ -76,6 +76,7 @@ const Dashboard = () => {
   };
 
   const sortByPrice = () => {
+    console.log("trigger");
     const sortedList = [...cartList].sort((a, b) => b.price - a.price);
     setstoreCartlist(sortedList);
   };
@@ -177,7 +178,7 @@ const Dashboard = () => {
                 Total Price: ${totalPrice}
               </span>
               <button
-                disabled={cartList.length === 0 || 1}
+               // disabled={cartList.length === 0 || 1}
                 onClick={sortByPrice}
                 className={`bg-white text-lg text-purple-500 border border-purple-500 border-b-pink-500 rounded-3xl px-4 py-1.5 flex items-center ${
                   cartList.length <= 1 ? "opacity-50 cursor-not-allowed" : ""
